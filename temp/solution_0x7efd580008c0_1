@@ -1,0 +1,187 @@
+(error "line 31 column 33: error setting ':produce-unsat-cores', option value cannot be modified after initialization")
+MEMORY-ORDER CONSTRAINTS -----
+sat
+(
+  (define-fun Basic1 () Bool
+    (and (= (+ RF_f3-1_main-2 RF_f3-1_f2-2 RF_f3-1_f2-6) 1)
+     (or (not (= RF_f3-1_f2-6 1)) (= (+ RF_f2-4_main-2 RF_f2-4_f2-2) 1))))
+  (define-fun Lock () Bool
+    (and (or (= B_f1-4_f2-1 1) (= B_f1-1_f2-3 0))
+     (or (= B_f1-4_f2-5 1) (= B_f1-1_f2-7 0))
+     (or (= B_f1-8_f2-1 1) (= B_f1-5_f2-3 0))
+     (or (= B_f1-8_f2-5 1) (= B_f1-5_f2-7 0))))
+  (define-fun B_f1-2_f2-4 () Int
+    0)
+  (define-fun B_f2-2_f3-1 () Int
+    1)
+  (define-fun M_main-2 () Int
+    0)
+  (define-fun B_f1-6_f2-2 () Int
+    0)
+  (define-fun RF_f3-1_f2-2 () Int
+    0)
+  (define-fun B_f1-6_f3-1 () Int
+    2)
+  (define-fun SWRelation6 () Bool
+    (or (not (= B_f1-4_f2-5 1)) (= B_f1-2_f2-6 1)))
+  (define-fun M_f1-6 () Int
+    1)
+  (define-fun B_f1-5_f2-7 () Int
+    0)
+  (define-fun B_f1-2_f2-6 () Int
+    0)
+  (define-fun RF_f1-5_f2-7 () Int
+    0)
+  (define-fun SWRelation5 () Bool
+    (or (not (= B_f1-1_f2-3 0)) (and (= B_f1-2_f2-2 0) (= B_f1-6_f2-2 0))))
+  (define-fun B_f1-1_f2-7 () Int
+    0)
+  (define-fun COWW () Bool
+    (and (or (not (= B_f1-2_f2-2 1)) (not (<= M_f2-2 M_f1-2)))
+     (or (not (= B_f1-2_f2-6 1)) (not (<= M_f2-6 M_f1-2)))
+     (or (not (= B_f1-6_f2-2 1)) (not (<= M_f2-2 M_f1-6)))
+     (or (not (= B_f1-6_f2-6 1)) (not (<= M_f2-6 M_f1-6)))
+     (or (not (= B_f1-2_f2-2 0)) (not (<= M_f1-2 M_f2-2)))
+     (or (not (= B_f1-6_f2-2 0)) (not (<= M_f1-6 M_f2-2)))
+     (or (not (= B_f1-2_f2-6 0)) (not (<= M_f1-2 M_f2-6)))
+     (or (not (= B_f1-6_f2-6 0)) (not (<= M_f1-6 M_f2-6)))))
+  (define-fun RF_f2-4_f2-2 () Int
+    1)
+  (define-fun SWRelation10 () Bool
+    (or (not (= B_f1-8_f2-5 1)) (and (= B_f1-2_f2-6 1) (= B_f1-6_f2-6 1))))
+  (define-fun B_f1-6_f2-4 () Int
+    0)
+  (define-fun RF_f1-1_f2-3 () Int
+    0)
+  (define-fun RF_f1-5_f2-3 () Int
+    0)
+  (define-fun B_f1-2_f2-2 () Int
+    0)
+  (define-fun B_f2-6_f3-1 () Int
+    1)
+  (define-fun SWRelation1 () Bool
+    (or (not (= RF_f3-1_f2-6 1)) (and (= B_f2-2_f3-1 1) (= B_f2-6_f3-1 1))))
+  (define-fun M_f2-6 () Int
+    0)
+  (define-fun B_f1-8_f2-5 () Int
+    7)
+  (define-fun COWR () Bool
+    (let ((a!1 (or (not (and (= RF_f3-1_f2-2 1) (= B_f1-2_f3-1 1)))
+               (not (<= M_f2-2 M_f1-2))))
+      (a!2 (or (not (and (= RF_f3-1_f2-2 1) (= B_f1-6_f3-1 1)))
+               (not (<= M_f2-2 M_f1-6))))
+      (a!3 (or (not (and (= RF_f3-1_f2-6 1) (= B_f1-2_f3-1 1)))
+               (not (<= M_f2-6 M_f1-2))))
+      (a!4 (or (not (and (= RF_f3-1_f2-6 1) (= B_f1-6_f3-1 1)))
+               (not (<= M_f2-6 M_f1-6))))
+      (a!5 (or (not (= RF_f3-1_f2-6 1))
+               (not (and (= RF_f2-4_f2-2 1) (= B_f1-2_f2-4 1)))
+               (not (<= M_f2-2 M_f1-2))))
+      (a!6 (or (not (= RF_f3-1_f2-6 1))
+               (not (and (= RF_f2-4_f2-2 1) (= B_f1-6_f2-4 1)))
+               (not (<= M_f2-2 M_f1-6)))))
+  (and a!1 a!2 a!3 a!4 a!5 a!6)))
+  (define-fun RF_f2-4_main-2 () Int
+    0)
+  (define-fun B_f1-4_f2-1 () Int
+    4)
+  (define-fun B_f1-6_f2-6 () Int
+    0)
+  (define-fun CORW () Bool
+    (let ((a!1 (or (not (and (= RF_f3-1_f2-2 1) (= B_f1-2_f3-1 0)))
+               (not (<= M_f1-2 M_f2-2))))
+      (a!2 (or (not (and (= RF_f3-1_f2-2 1) (= B_f1-6_f3-1 0)))
+               (not (<= M_f1-6 M_f2-2))))
+      (a!3 (or (not (and (= RF_f3-1_f2-6 1) (= B_f1-2_f3-1 0)))
+               (not (<= M_f1-2 M_f2-6))))
+      (a!4 (or (not (and (= RF_f3-1_f2-6 1) (= B_f1-6_f3-1 0)))
+               (not (<= M_f1-6 M_f2-6))))
+      (a!5 (or (not (and (= RF_f2-4_f2-2 1) (= B_f1-2_f2-4 0)))
+               (not (<= M_f1-2 M_f2-2))))
+      (a!6 (or (not (and (= RF_f2-4_f2-2 1) (= B_f1-6_f2-4 0)))
+               (not (<= M_f1-6 M_f2-2)))))
+  (and a!1 a!2 a!3 a!4 a!5 a!6)))
+  (define-fun B_f1-4_f2-5 () Int
+    5)
+  (define-fun M_f2-2 () Int
+    0)
+  (define-fun RF_f1-1_f2-7 () Int
+    0)
+  (define-fun RF_f2-1_f1-8 () Int
+    0)
+  (define-fun CORF () Bool
+    (and (or (not (= B_f2-2_f3-1 0)) (not (= RF_f3-1_f2-2 1)))
+     (or (not (= B_f2-6_f3-1 0)) (not (= RF_f3-1_f2-6 1)))))
+  (define-fun B_f1-5_f2-3 () Int
+    0)
+  (define-fun B_f1-2_f3-1 () Int
+    3)
+  (define-fun M_f1-2 () Int
+    1)
+  (define-fun RF_f2-5_f1-4 () Int
+    0)
+  (define-fun SWRelation11 () Bool
+    (or (not (= B_f1-5_f2-7 0))
+    (and (= B_f1-6_f2-2 0) (= B_f1-6_f2-4 0) (= B_f1-6_f2-6 0))))
+  (define-fun SWRelation8 () Bool
+    (or (not (= B_f1-8_f2-1 1))
+    (and (= B_f1-2_f2-2 1)
+         (= B_f1-2_f2-4 1)
+         (= B_f1-2_f2-6 1)
+         (= B_f1-6_f2-2 1)
+         (= B_f1-6_f2-4 1)
+         (= B_f1-6_f2-6 1))))
+  (define-fun SWRelation0 () Bool
+    (or (not (= RF_f3-1_f2-2 1)) (= B_f2-2_f3-1 1)))
+  (define-fun SWRelation2 () Bool
+    (or (not (= B_f1-4_f2-1 1))
+    (and (= B_f1-2_f2-2 1) (= B_f1-2_f2-4 1) (= B_f1-2_f2-6 1))))
+  (define-fun B_f1-8_f2-1 () Int
+    6)
+  (define-fun SWRelation7 () Bool
+    (or (not (= B_f1-1_f2-7 0))
+    (and (= B_f1-2_f2-2 0)
+         (= B_f1-6_f2-2 0)
+         (= B_f1-2_f2-4 0)
+         (= B_f1-6_f2-4 0)
+         (= B_f1-2_f2-6 0)
+         (= B_f1-6_f2-6 0))))
+  (define-fun RW_RF_f3-1_f2-6_f2-4_0 () Bool
+    (let ((a!1 (and (= RF_f2-4_f2-2 1)
+                (not (and (= B_f1-2_f2-2 0) (= B_f1-2_f2-4 1)))
+                (not (and (= B_f1-6_f2-2 0) (= B_f1-6_f2-4 1))))))
+  (or (not (= RF_f3-1_f2-6 1)) a!1)))
+  (define-fun B_f1-1_f2-3 () Int
+    0)
+  (define-fun RWf3-1_0 () Bool
+    (let ((a!1 (and (= RF_f3-1_f2-6 1)
+                (not (= B_f2-6_f3-1 0))
+                (not (and (= B_f1-2_f2-6 0) (= B_f1-2_f3-1 1)))
+                (not (and (= B_f1-6_f2-6 0) (= B_f1-6_f3-1 1)))))
+      (a!2 (and (= RF_f3-1_f2-2 1)
+                (not (= B_f2-2_f3-1 0))
+                (not (and (= B_f1-2_f2-2 0) (= B_f1-2_f3-1 1)))
+                (not (and (= B_f1-6_f2-2 0) (= B_f1-6_f3-1 1)))
+                (not (= B_f2-6_f3-1 1)))))
+  (or a!1
+      a!2
+      (and (= RF_f3-1_main-2 1)
+           (not (= B_f1-2_f3-1 1))
+           (not (= B_f1-6_f3-1 1))
+           (not (= B_f2-2_f3-1 1))
+           (not (= B_f2-6_f3-1 1))))))
+  (define-fun RF_f3-1_main-2 () Int
+    0)
+  (define-fun RF_f2-5_f1-8 () Int
+    0)
+  (define-fun SWRelation9 () Bool
+    (or (not (= B_f1-5_f2-3 0)) (= B_f1-6_f2-2 0)))
+  (define-fun RF_f3-1_f2-6 () Int
+    1)
+  (define-fun RF_f2-1_f1-4 () Int
+    0)
+  (define-fun B_f2-4_f3-1 () Int
+    0)
+)
+(error "line 94 column 15: unsat core is not available")
+end
